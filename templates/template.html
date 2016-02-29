@@ -11,7 +11,7 @@
         h1              { border-bottom: 2px solid #eee; }
         h2              { font-size: 1.2em; }
         table.dataframe, .dataframe th, .dataframe td {
-        border: 1px solid #CCCCCC;
+        border: none;
         border-bottom: 1px solid #C8C8C8;
         border-collapse: collapse;
         text-align:left;
@@ -29,16 +29,12 @@
     <table>
       <thead>
         <tr>
-          <th>Header, Column 1</th>
-          <th>Header, Column 2</th>
+          <th>Memory Metrics</th>
+          <th>Memory Usage</th>
         </tr>
       </thead>
       <tbody>
-	<tr>
-	  <td>Values go here:</td>
-	  <td>And here</td>
-	</tr>
-        {% for n in values %}
+        {% for n in my_list.iteritems() %}
         <tr>
           <td>Here's my value:</td>
           <td>{{n}}</td>
