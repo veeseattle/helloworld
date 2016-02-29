@@ -34,7 +34,7 @@
         </tr>
       </thead>
       <tbody>
-        {% for n in my_list %}
+        {% for n in my_list.iteritems() %}
         <tr>
           <td>Here's my value:</td>
           <td>{{n}}</td>
