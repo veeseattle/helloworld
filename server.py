@@ -1,4 +1,6 @@
-from flask import Flask, render_template, csv
+from flask import Flask, render_template
+import csv
+
 app = Flask(__name__) #this feeds the name of the file to Flask 
 
 @app.route("/")
