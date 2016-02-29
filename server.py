@@ -11,7 +11,7 @@ def hello():
 			fieldnames = ('total', 'used', 'free', 'shared', 'buffers')
 			headers = dict( (n, n) for n in fieldnames)
 			dataList = [ row for row in csvreader ]
-	return render_template('template.html', my_string=dataList, my_list=["Memory Free","Compressed Mem","Ports","PID","User"])
+		return render_template('template.html', my_string=dataList, my_list=["Memory Free","Compressed Mem","Ports","PID","User"])
 
 if __name__ == '__main__':
 	app.run(host='0.0.0.0', port=5000)
