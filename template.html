@@ -12,10 +12,18 @@
     </style>
   </head>
   <body>
+    <title>Memory Usage</title>
+    <div class=page>
+      {% for table in tables %}
+        <h2>{{values[loop.index]}}</h2>
+      {{ table|safe }}
+      {% endfor %}
+    </div>
+
     <div class="container">
       <p>{my_string}}</p>
       <p>Value from the list: {{my_list[3]}}</p>
-      <p>Will display the following stats:</p>
+      <p>Will display the following stats:{{values}}</p>
       <ul>
         {% for n in my_list %}
         <li>{{n}}</li>
