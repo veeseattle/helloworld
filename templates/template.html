@@ -3,26 +3,45 @@
   <head>
     <title>Flask Template Example</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <style type="text/css">
       .container {
-        max-width: 500px;
-        padding-top: 100px;
+        body            { font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;}
+        a, h1, h2       { color: #377ba8; }
+        h1, h2          { margin: 0; }
+        h1              { border-bottom: 2px solid #eee; }
+        h2              { font-size: 1.2em; }
+        table.dataframe, .dataframe th, .dataframe td {
+        border: none;
+        border-bottom: 1px solid #C8C8C8;
+        border-collapse: collapse;
+        text-align:left;
+        padding: 10px;
+        margin-bottom: 40px;
+        font-size: 0.9em;
+        }
       }
     </style>
   </head>
   <body>
+    <title>Memory Usage</title>
     <div class="container">
-      <p>My string: {{my_string}}</p>
-      <p>Value from the list: {{my_list[3]}}</p>
-      <p>Loop through the list:</p>
-      <ul>
-        {% for n in my_list %}
-        <li>{{n}}</li>
-        {% endfor %}
-      </ul>
-    </div>
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Header, Column 1</th>
+          <th>Header, Column 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for n in values %}
+        <tr>
+          <td>Here's my value:</td>
+          <td>{{n}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+  </table>
+  </div>
   </body>
 </html>
