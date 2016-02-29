@@ -25,16 +25,25 @@
   <body>
     <title>Memory Usage</title>
     <div class="container">
+    
     <table>
-      {% for n in values %}
-        <tr>
-          <th> </th>
-          <td>{n}</td> 
-        </tr>
+      <thead>
+        <tr>
+          <th>Header, Column 1</th>
+          <th>Header, Column 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for n in values %}
+        <tr>
+          <td>Here's my value:</td>
+          <td>{{n}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+  </table>
+  </div>
 
-      {% endfor %}
-    </table>
-   </div>
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
   </body>
 </html>
