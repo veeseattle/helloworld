@@ -12,6 +12,7 @@ def show_mem_table():
 		for value in csvreader:
 			values = '\t'.join(value)
 		return render_template('template.html', my_string=fieldnames, my_list=values)
+		print values
 
 if __name__ == '__main__':
 	app.run(host='0.0.0.0', port=5000)
