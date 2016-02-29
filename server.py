@@ -8,7 +8,7 @@ def hello():
 	with open('data.csv', 'r') as csvfile:
 		csvreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
 		for row in csvreader:
-			print ', '.join(row)
+			print ' '.join(row)
 	return render_template('template.html', my_string="My Data", my_list=["Memory Free","Compressed Mem","Ports","PID","User"])
 
 if __name__ == '__main__':
