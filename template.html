@@ -29,19 +29,12 @@
   </head>
   <body>
     <title>Memory Usage</title>
-<!--     <div class=page>
-      {% for table in tables %}
-        <h2>{{values[loop.index]}}</h2>
-      {{ table|safe }}
-      {% endfor %}
-    </div> -->
-
     <div class="container">
     <table>
-      {% for key, value in values.iteritems() %}
+      {% for n in values %}
         <tr>
-          <th> {{key}} </th>
-          <td> {{value}} </td> 
+          <th> n </th>
+          <td> n </td> 
         </tr>
 <!--       
       <p>{my_string}}</p>
