@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <style type="text/css">
-      .container {
+      /*.container {
         max-width: 500px;
         padding-top: 100px;
-      }
-      .page {
+      }*/
+      .container {
         body            { font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;}
         a, h1, h2       { color: #377ba8; }
         h1, h2          { margin: 0; }
@@ -29,20 +29,24 @@
   </head>
   <body>
     <title>Memory Usage</title>
-    <div class=page>
+<!--     <div class=page>
       {% for table in tables %}
         <h2>{{values[loop.index]}}</h2>
       {{ table|safe }}
       {% endfor %}
-    </div>
+    </div> -->
 
     <div class="container">
+      {% for table in tables %}
+        <h2>{{values[loop.index]}}</h2>
+      {{ table|safe }}
+<!--       
       <p>{my_string}}</p>
       <p>Value from the list: {{my_list[3]}}</p>
       <p>Will display the following stats:{{values}}</p>
       <ul>
         {% for n in my_list %}
-        <li>{{n}}</li>
+        <li>{{n}}</li> -->
         {% endfor %}
       </ul>
     </div>
