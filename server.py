@@ -12,7 +12,7 @@ def show_mem_table():
 			values = []
 			for row in csvreader:
 				values.append(row)
-			return render_template('template.html', my_headers=memheaders, my_values=values)
+			return render_template('template.html', my_headers=memheaders, my_values=values[0])
 	except Exception as e:
 		return str(e)
 

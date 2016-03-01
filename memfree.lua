@@ -22,7 +22,7 @@ local memcached = meminfo.Cached.size
 
 local swaptotal = meminfo.SwapTotal.size
 
-print(string.format(memtotal, memused, memfree, membuffers, memcached))
+print(string.format("%d %d %d %d %d", memtotal, memused, memfree, membuffers, memcached))
 -- print(string.format("%s", memused))
 -- print(string.format("%s", memfree))
 -- print(string.format("%s", membuffers))

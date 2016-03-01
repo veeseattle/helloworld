@@ -23,15 +23,10 @@
 
   <script type="text/javascript">
 
-var dataset = my_values;
-
-var myValues = [];
-
-for (var i = 0; i < my_values.length; i++) {
-  var newNumber = Number(my_values(i))
-  myValues.append(newNumber)
-}
-
+var dataset = {
+   values: [499428, 0, 0, 0, 185172],
+};
+ 
 var width = 460,
     height = 300,
     radius = Math.min(width, height) / 2;
@@ -52,8 +47,8 @@ var svg = d3.select("body").append("svg")
     .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
 var path = svg.selectAll("path")
-    .data(pie(my_values))
-  .enter().append("path")
+    .data(pie(dataset.values))
+    .enter().append("path")
     .attr("fill", function(d, i) { return color(i); })
     .attr("d", arc);
 
