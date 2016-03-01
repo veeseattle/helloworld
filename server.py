@@ -7,7 +7,7 @@ app = Flask(__name__) #this feeds the name of the file to Flask
 def show_mem_table():
 	with open('data.csv', 'r') as csvfile:
 		csvreader = csv.reader(csvfile, delimiter=',', quotechar='|')
-		memheaders = 'total, used, free, shared, buffers'
+		memheaders = ['total, used, free, shared, buffers']
 		values = []
 		for value in csvreader:
 			values.append(value)

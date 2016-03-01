@@ -27,18 +27,12 @@
     <div class="container">
     
     <table>
-      <thead>
-        <tr>
-          <th>Memory Metrics</th>
-          <th>Memory Usage</th>
-        </tr>
-      </thead>
       <tbody>
-        {% for n in my_list.iteritems() %}
         <tr>
+        {% for n in my_string.iteritems() %}
           <td>{{n}}</td>
-        </tr>
         {% endfor %}
+        </tr>
       </tbody>
   </table>
   </div>
