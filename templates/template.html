@@ -29,10 +29,15 @@
     <table>
       <tbody>
         <tr>
-        {% for n in my_string.iteritems() %}
+        {% for n in my_headers %}
           <td>{{n}}</td>
-        {% endfor %}
+        {% endfor %}
         </tr>
+        <tr>
+        {% for m in my_values %}
+          <td>{{m}}</td>
+        {% endfor %}
+        </tr>
       </tbody>
   </table>
   </div>
